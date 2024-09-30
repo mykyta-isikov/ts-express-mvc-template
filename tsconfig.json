@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "esModuleInterop": true,
+        "target": "ES2015",
+        "sourceMap": true,
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "baseUrl": "./src",
+        "strict": true,
+        "resolveJsonModule": true,
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "Node",
+        "paths": {
+            "@controllers/*": ["controllers/*"],
+            "@models/*": ["models/*"],
+            "@routes/*": ["routes/*"],
+            "@middleware/*": ["middleware/*"],
+            "@utils/*": ["utils/*"],
+        },
+        "plugins": [
+            { "transform": "typescript-transform-paths" },
+            {
+                "transform": "typescript-transform-paths",
+                "afterDeclarations": true
+            }
+        ]
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+}
