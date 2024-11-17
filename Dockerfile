@@ -12,7 +12,9 @@ COPY --chown=node:node . .
 
 RUN npm run build
 
-EXPOSE 8080
+# Exposes 8080 if PORT env variable is undefined.
+EXPOSE 8080 
+
 
 USER node
 

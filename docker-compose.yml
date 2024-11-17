@@ -2,7 +2,7 @@ services:
   app:
     build: .
     ports:
-      - 8080:8080
+      - ${HOST_PORT}:${PORT}
     env_file: '.env'
     environment:
-      PORT: ${PORT}
+      RUNNING_AS_CONTAINER: 1
